@@ -58,6 +58,6 @@ class BcImgSpider(scrapy.Spider):
 
     def initStarUrl(self):
          for i in range(0,self.maxPage):
-            start_url = self.wyUrl + "?" +self.wyParam.format(page=i)
+            start_url = self.wyUrl + "?" +self.wyParam.format(page=i,fn=self.fn)
             self.start_urls.append(start_url)
         
